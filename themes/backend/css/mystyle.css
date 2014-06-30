@@ -1,0 +1,12 @@
+.MultiFile-title{
+	display:none;
+}
+.MultiFile-remove{
+	color:red !important;
+}
+#empty_image{
+	display:none;
+}
+.logo h4{
+    background-size: auto 100%;
+}

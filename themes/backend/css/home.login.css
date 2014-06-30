@@ -1,0 +1,15 @@
+label.required{
+	display:none;
+}
+.login-widget input[type="text"], .login-widget input[type="password"], .registration-widget input[type="text"], .registration-widget input[type="password"] {
+    width: 313px;
+}
+.well{
+	background: none;
+	background-color:transparent;
+	padding:0;
+	box-shadow:none;
+}
+.btn{
+	margin-bottom:20px;
+}

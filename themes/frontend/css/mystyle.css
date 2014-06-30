@@ -1,0 +1,24 @@
+#modal-gallery.modal{
+	width:auto;
+}
+#superModal .modal-body p{
+	text-align:center;
+	font-size:16px;
+}
+#superModal .modal-body p.red{
+	color:#C00;
+}
+#superModal .modal-body p.green{
+	color:#0C0;
+}
+#superModal .modal-header{
+	padding: 0px 8px;
+	border:none;
+}
+#btnSuperModal{
+	display:none;
+}
+.partnersBlock .borderBanner{
+	border:none;
+	box-shadow:none;
+}

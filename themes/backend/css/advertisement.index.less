@@ -1,0 +1,53 @@
+@import url("function.less");
+@import url("fonts.less");
+
+
+.file-box
+{
+    margin:0 0;
+    max-width:377px;
+    margin-bottom:15px;
+    position:relative;
+    span{
+        .box-shadow(0, 0, 0, 1px, #d7d7d7);
+	height:29px;
+	line-height:29px;
+	width:64%;
+	display:block;
+	text-indent:22px;
+	border-radius:0px;
+	.font-options(16px, #989696);
+	}
+    input{
+        display:none;
+	}
+    a{
+        position:absolute;
+	left:64%;
+	top:-1px;
+	width:82px;
+	background:#dedddd;
+	text-align:center;
+	height:31px;
+	line-height:31px;
+	.font-options(16px, #989696);
+    }
+}
+
+.widget
+{
+    .body
+    {
+        .radio-list
+        {
+            display: inline-block;
+            margin-right: 20px; 
+            input
+            {
+                margin: 0;
+                vertical-align: middle;
+                box-shadow: none;
+            }
+        }
+    }
+}
