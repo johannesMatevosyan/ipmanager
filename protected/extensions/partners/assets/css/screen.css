@@ -1,0 +1,80 @@
+#add_partner
+{
+    text-align: right;
+}
+
+#showImage .modal-body
+{
+    text-align: center;
+}
+
+#showImage .modal-body img
+{
+    max-height: 200px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-upload
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#uploadPreview
+{
+    max-height: 300px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-preview
+{
+    margin-left: 5%;
+    width: 45%;
+    text-align: center;
+}
+
+.bx-wrapper
+{
+    
+}
+
+.borderBanner
+{
+    border: solid #fff 5px;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+}
+
+.bx-wrapper .bx-viewport 
+{
+    border: none !important;
+    box-shadow: none !important;    
+    background: none !important;
+}
+
+.bxslider li
+{
+    width: 170px;
+    height: 100px;
+    position: relative;
+    float: none !important;
+    display: inline-block !important;
+}
+
+.bxslider li .boxContent
+{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 170px;
+    height: 100px;
+}
+.bxslider li .boxContent img
+{
+    display: inline-block;
+    position: relative;
+}

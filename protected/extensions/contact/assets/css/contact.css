@@ -1,0 +1,93 @@
+
+#captcha{
+    margin-left:370px;
+    
+}
+.text_field{
+    margin-left:350px !important;
+    margin-top:20px;
+}
+.form-submit{
+    
+    width:670px !important;
+    height:30px    
+}
+.text_error{
+    margin-left:330px !important;
+    color:red !important;
+    font-size:15px;
+}
+.help-block{
+    color:red !important;
+    font-size:14px;
+}
+  #infoPanel {
+    float: left;
+    margin-left: 10px;
+  }
+  #infoPanel div {
+    margin-bottom: 5px;
+  }
+  
+  #resizable { 
+      width: 150px; 
+      height: 150px; 
+      padding: 0em; 
+  }
+  #resizable h3 { 
+      text-align: center; 
+      margin: 0; 
+  }
+  .ui-resizable-helper { 
+      border: 5px dotted #00F; 
+  }
+  .verifyLabel{
+      margin-left:300px !important;
+  }
+  textarea {
+    resize: none !important;
+  }
+  #mails{
+      margin-top:30px;
+      width:800px;
+      height:50px;
+     
+  }
+  #mails a{
+      padding:35px 48px 20px 48px;
+      text-decoration:none;
+      color:black;
+      font-size:24px;
+      font-weight:bold;
+      border:2px solid black;
+      border-bottom:0;  
+      cursor:pointer
+  }
+  .grid-size{
+    width:  690px !important;
+    height: 300px !important;
+    text-align: center;
+    }
+    #grid-view{
+        display:block;
+    }
+    #mail_config_tab,#our_contacts {
+         margin-left:10px;
+        display:none;
+    }
+    #mail_config,#contacts_list {
+        background-color:#EFEFEF;
+    }
+    #mail_list{
+        background-color:#D7F3F7;
+    }
+    #our_contacts_table {
+        margin-left:400px;
+    }
+    #save {
+        margin-left:150px;
+        margin-top:50px;
+    }
+    .client {
+        width:870px !important;
+    }
