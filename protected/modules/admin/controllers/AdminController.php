@@ -24,11 +24,11 @@ class AdminController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+/*	public function accessRules()
 	{
 		return array(
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('contacts','orders','getrecoverydata','getorderdata', 'deleteOrder', 'deleteItem','addOsnastka','addShtamp', 'addshtampcategory','shtamps','getshtampdata', 'deleteletter','pages','viewSitemap','addImage','updateSitemap','partners','index','viewGallery','articles','createArticle','updateArticle','deleteImage','deleteArticle','activateArticle'),
+				'actions'=>array('index'),
 				'users'=>array('@'),
                 'expression'=>"Yii::app()->user->role.' == admin'",
 			),
@@ -37,7 +37,12 @@ class AdminController extends Controller
 			),
 		);
 	}
+*/
+    public function actionIndex()
+    {
+        $this->render('index');
 
+    }
     public function actionOrders()
     {
         $orders     = new CActiveDataProvider('OrderModel');
@@ -532,10 +537,6 @@ class AdminController extends Controller
 	public function actionContacts()
 	{
 		$this->render('contacts');
-	}
-	public function actionIndex()
-	{
-		$this->render('index');
 	}
 
 	public function actionAdmin()

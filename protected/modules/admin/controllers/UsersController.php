@@ -20,6 +20,7 @@ class UsersController extends Controller
 		);
 	}
 
+
 	public function accessRules()
 	{
 		return array(
@@ -28,7 +29,7 @@ class UsersController extends Controller
                                 'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('userUpdate'),
+				'actions'=>array('userUpdate', 'getuserlist', 'userform'),
 				'users'=>array('@'),
                 'expression'=>'isset($user->role) && ($user->role==="admin")',
 			),
@@ -39,7 +40,29 @@ class UsersController extends Controller
 		);
 	}
 
-	/**
+    public function actionGetUserList()
+    {
+        $this->render('user_list');
+    }
+
+    public function actionUserForm()
+    {
+        $user = new Users();
+        if (isset($_POST['Users'])) {
+            if (isset($_POST['Users']['IdUsers'])) {
+                $user = Users::model()->findByPk($_POST['Users']['IdUsers']);
+                $user->setIsNewRecord(false);
+            }
+            $user->attributes = $_POST['Users'];
+            $user->userRole = 'user';
+            if (!$user->save())
+                print_r($user->getErrors()); die;
+        }
+        $this->render('_form', compact('user'));
+
+    }
+
+    /**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */

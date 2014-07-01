@@ -1,16 +1,11 @@
 <?php
-define('CATEGORY_ABOUT_US', 1);
-define('CATEGORY_ABOUT_COMPANY', 2);
-define('CATEGORY_PRODUCTS', 3);
-define('CATEGORY_ARTICLES', 4);
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
-Yii::setPathOfAlias('partners', dirname(__FILE__).'/../extensions/partners');
-Yii::setPathOfAlias('contact', dirname(__FILE__).'/../extensions/contact');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'IpManager',
@@ -23,16 +18,11 @@ return array(
 		'application.models.*',
 		'application.components.*',
         'application.modules.admin.components',
-        'ext.partners.model.*',
-        'ext.partners.widgets.*',
-        'ext.contact.model.*',
-        'ext.contact.widgets.*',
 	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		'admin',
-		'Filemanager',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'1234',
@@ -68,7 +58,8 @@ return array(
                   'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
                 
                   '' => 'admin/users/login',
-                  '/admin' => 'admin/users/login',
+                  '/admin/index'=> '/admin/admin/index',
+                  //'/admin' => 'admin/users/login',
                	  '/admin/<action:\w+>/<id:\d+>' => 'admin/admin/<action>',
                   '/admin/<action:\w+>' => 'admin/admin/<action>',
                   '/users' => 'admin/users/index',

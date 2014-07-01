@@ -3455,3 +3455,572 @@ Stack trace:
 REQUEST_URI=/ipmanager/
 HTTP_REFERER=http://localhost/ipmanager/admin/index
 ---
+2014/06/30 23:26:22 [error] [exception.CException] exception 'CException' with message 'Путь CAssetManager.basePath "Z:\home\localhost\www\iptest\ipmanager\assets" задан неверно. Удостоверьтесь, что директория существует и доступна для записи пользователю, под которым запущен веб-сервер.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CAssetManager.php:138
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('Z:\home\localho...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\components\Bootstrap.php(478): CAssetManager->publish('Z:\home\localho...', false, -1, false)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\components\packages.php(15): Bootstrap->getAssetsUrl()
+#4 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\components\Bootstrap.php(218): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\components\Bootstrap.php(203): Bootstrap->appendUserSuppliedPackagesToOurs()
+#6 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\components\Bootstrap.php(171): Bootstrap->includeAssets()
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(387): Bootstrap->init()
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#9 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\layouts\main.php(7): CModule->__get('bootstrap')
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#13 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(358): CController->render('login', Array)
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#24 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#25 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/iptest/ipmanager/
+---
+2014/06/30 23:36:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/subnet/getSubnetList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/subnet/ge...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/subnet/getSubnetList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/shtamps
+---
+2014/06/30 23:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/subnet/getSubnetList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/subnet/ge...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/subnet/getSubnetList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/shtamps
+---
+2014/06/30 23:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/subnet/getSubnetList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/subnet/ge...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/subnet/getSubnetList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/shtamps
+---
+2014/06/30 23:39:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/subnet/getSubnetList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/subnet/ge...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/06/30 23:42:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/website/getWebsiteList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/website/g...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/website/getWebsiteList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/06/30 23:45:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/user/getUserList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user/getU...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/user/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/06/30 23:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/user/getUserList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user/getU...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/user/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/06/30 23:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/user/getUserList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user/getU...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/user/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/06/30 23:47:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 01:02:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/website/getWebsiteList
+---
+2014/07/01 01:03:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 01:03:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 01:03:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 01:04:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 01:10:00 [error] [exception.CException] exception 'CException' with message 'Контроллер UsersController не может найти представление "create".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:878
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(71): CController->render('create', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionUserForm()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 01:33:45 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userLastVisit' in 'field list'. Выполнявшийся SQL-запрос: UPDATE `tbl_users` SET `userLastVisit`='2014-07-01 01:33:45' WHERE `IdUsers`=''.
+in Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php (149)
+in Z:\home\localhost\www\iptest\ipmanager\index.php (13)
+2014/07/01 01:33:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userLastVisit' in 'field list'. The SQL statement executed was: UPDATE `tbl_users` SET `userLastVisit`='2014-07-01 01:33:45' WHERE `IdUsers`=''' in Z:\home\localhost\www\iptest\ipmanager\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(149): CDbCommand->execute()
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/iptest/ipmanager/
+HTTP_REFERER=http://localhost/iptest/ipmanager/
+---
+2014/07/01 01:34:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/admin  /index".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin  /i...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/admin/admin%20%20/index
+HTTP_REFERER=http://localhost/iptest/ipmanager/
+---
+2014/07/01 01:40:31 [error] [exception.CException] exception 'CException' with message 'В классе CWebApplication и его поведениях не найден метод или замыкание с именем "redirect".' in Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php:265
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(144): CComponent->__call('redirect', Array)
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(144): CWebApplication->redirect('/iptest/ipmanag...')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/iptest/ipmanager/users/login
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/login
+---
+2014/07/01 01:49:54 [error] [exception.CException] exception 'CException' with message 'Свойство "WebUser.role" доступно только для чтения.' in Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php:170
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CWebUser.php(154): CComponent->__set('role', 'admin')
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\components\UserIdentity.php(15): CWebUser->__set('role', 'admin')
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(143): CModel->validate()
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/iptest/ipmanager/users/login
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/login
+---
+2014/07/01 01:50:20 [error] [exception.CException] exception 'CException' with message 'Свойство "WebUser.role" доступно только для чтения.' in Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php:170
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CWebUser.php(154): CComponent->__set('role', 'admin')
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\components\UserIdentity.php(15): CWebUser->__set('role', 'admin')
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(143): CModel->validate()
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/iptest/ipmanager/users/login
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/login
+---
+2014/07/01 01:50:32 [error] [exception.CException] exception 'CException' with message 'Свойство "WebUser.role" доступно только для чтения.' in Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php:170
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CWebUser.php(154): CComponent->__set('role', 'admin')
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\components\UserIdentity.php(15): CWebUser->__set('role', 'admin')
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\models\LoginForm.php(50): UserIdentity->authenticate()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(143): CModel->validate()
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/iptest/ipmanager/users/login
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/login
+---
+2014/07/01 22:05:49 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userName' in 'where clause'. Выполнявшийся SQL-запрос: SELECT *
+FROM `tbl_users`
+WHERE userName=:userName.
+in Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php (139)
+in Z:\home\localhost\www\iptest\ipmanager\index.php (13)
+2014/07/01 22:05:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'userName' in 'where clause'. The SQL statement executed was: SELECT *
+FROM `tbl_users`
+WHERE userName=:userName' in Z:\home\localhost\www\iptest\ipmanager\framework\db\CDbCommand.php:541
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(139): CDbCommand->queryRow()
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('login')
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/log...')
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/iptest/ipmanager/
+HTTP_REFERER=http://localhost/iptest/ipmanager/
+---
+2014/07/01 22:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getUserList".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('getUserList')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 22:08:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/subnet/getSubnetList
+---
+2014/07/01 22:09:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "userform".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('userform')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 22:23:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 22:23:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 22:24:09 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\input\TbInput.php:145
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(147): TbInput->init()
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(284): TbActiveForm->inputRow('text', NULL, 'userFName', NULL, Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\_form.php(8): TbActiveForm->textFieldRow(NULL, 'userFName', Array)
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', NULL, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', NULL, true)
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('_form', NULL, true)
+#9 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(59): CController->render('_form')
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionUserForm()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#21 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 22:25:25 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\input\TbInput.php:145
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(147): TbInput->init()
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(284): TbActiveForm->inputRow('text', NULL, 'userFName', NULL, Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\_form.php(8): TbActiveForm->textFieldRow(NULL, 'userFName', Array)
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', NULL, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', NULL, true)
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('_form', NULL, true)
+#9 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(59): CController->render('_form')
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionUserForm()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#21 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/01 22:29:11 [error] [exception.CException] exception 'CException' with message 'Неправильный алиас "bootstrap.components.Bootstrap". Убедитесь, что он указывает на существующую директорию или файл.' in Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php:341
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\layouts\main.php(7): CModule->__get('bootstrap')
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(45): CController->render('user_list')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionGetUserList()
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/userform
+---
+2014/07/01 22:29:42 [error] [exception.CException] exception 'CException' with message 'Неправильный алиас "bootstrap.components.Bootstrap". Убедитесь, что он указывает на существующую директорию или файл.' in Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php:341
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\base\CModule.php(103): CModule->getComponent('bootstrap')
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\layouts\main.php(7): CModule->__get('bootstrap')
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(45): CController->render('user_list')
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionGetUserList()
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+---

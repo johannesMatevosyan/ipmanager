@@ -31,13 +31,11 @@ class Users extends CActiveRecord
 		// will receive user inputs.
 		return array(
                     array('userEmail', 'unique'),
-                    array('userFName, userLName, userEmail, userEmail_confirm, userPassword, userPassword_confirm, userRole', 'required'),
-                    array('userFName, userLName, userEmail, userEmail_confirm, userPassword_current, userPassword, userPassword_confirm', 'length', 'max'=>255),
+                    array('userFName, userEmail, userPassword, userRole', 'required'),
+                    array('userFName, userLNa`me, userEmail, userEmail_confirm, userPassword_current, userPassword, userPassword_confirm', 'length', 'max'=>255),
                     array('userPhone', 'length', 'max'=>150),
                     //array('userPhone', 'match', 'pattern'=>'/^([+]?[0-9 ]+)$/'),
                     array('userEmail, userEmail_confirm', 'email'),
-                    array('userPassword', 'compare', 'compareAttribute'=>'userPassword_confirm'),
-                    array('userEmail', 'compare', 'compareAttribute'=>'userEmail_confirm'),
                     // The following rule is used by search().
                     // Please remove those attributes that should not be searched.
                     array('userActiveKey, userPassword_current, userPassword_new, userPhone','safe'),
@@ -63,11 +61,11 @@ class Users extends CActiveRecord
 		return array(
 			'IdUsers' => 'Id Users',
 			'userRole' => 'Role',
-			'userFName' => 'Имя',
+			'userFName' => 'Userame',
 			'userLName' => 'Фамилия',
-			'userEmail' => 'Эл. почта',
-			'userPhone' => 'Телефон',
-			'userPassword' => 'Пароль',
+			'userEmail' => 'Email',
+			'userPhone' => 'Phone',
+			'userPassword' => 'Password',
 			'userRegDate' => 'Дата регистрации',
 			'userBallance' => 'Баланс',
 		);

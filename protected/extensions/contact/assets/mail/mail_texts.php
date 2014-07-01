@@ -1,1 +1,0 @@
-a:3:{s:7:"mail_to";N;s:12:"mail_subject";N;s:12:"mail_message";N;}
