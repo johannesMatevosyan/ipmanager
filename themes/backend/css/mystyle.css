@@ -10,3 +10,6 @@
 .logo h4{
     background-size: auto 100%;
 }
+.user-list table th,.user-list table td  {
+	color:black
+}

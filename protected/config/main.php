@@ -18,6 +18,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
         'application.modules.admin.components',
+        'application.modules.admin.models.*',
 	),
 
 	'modules'=>array(
@@ -47,7 +48,6 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		'bootstrap' => array(
             'class' => 'bootstrap.components.Bootstrap',
-            //'responsiveCss' => true,
         ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
@@ -59,12 +59,8 @@ return array(
                 
                   '' => 'admin/users/login',
                   '/admin/index'=> '/admin/admin/index',
-                  //'/admin' => 'admin/users/login',
                	  '/admin/<action:\w+>/<id:\d+>' => 'admin/admin/<action>',
                   '/admin/<action:\w+>' => 'admin/admin/<action>',
-                  '/users' => 'admin/users/index',
-                  '/users/<action:\w+>/<id:\d+>' => 'admin/users/<action>',
-                  '/users/<action:\w+>' => 'admin/users/<action>',
 			),
 		),
 		/*

@@ -32,7 +32,7 @@ class Users extends CActiveRecord
 		return array(
                     array('userEmail', 'unique'),
                     array('userFName, userEmail, userPassword, userRole', 'required'),
-                    array('userFName, userLNa`me, userEmail, userEmail_confirm, userPassword_current, userPassword, userPassword_confirm', 'length', 'max'=>255),
+                    array('userFName, userLName, userEmail, userEmail_confirm, userPassword_current, userPassword, userPassword_confirm', 'length', 'max'=>255),
                     array('userPhone', 'length', 'max'=>150),
                     //array('userPhone', 'match', 'pattern'=>'/^([+]?[0-9 ]+)$/'),
                     array('userEmail, userEmail_confirm', 'email'),

@@ -4024,3 +4024,722 @@ Stack trace:
 #21 {main}
 REQUEST_URI=/iptest/ipmanager/users/getUserList
 ---
+2014/07/02 22:51:54 [error] [exception.CException] exception 'CException' with message 'Псевдоним "bootstrap.TBGridView" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWidgetFactory.php(146): YiiBase::import('bootstrap.TBGri...', true)
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsersController), 'bootstrap.TBGri...', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.TBGri...', Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\user_list.php(11): CBaseController->widget('bootstrap.TBGri...', Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('user_list', Array, true)
+#8 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(50): CController->render('user_list', Array)
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionGetUserList()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/index
+---
+2014/07/02 22:52:00 [error] [exception.CException] exception 'CException' with message 'Псевдоним "bootstrap.TbGridView" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWidgetFactory.php(146): YiiBase::import('bootstrap.TbGri...', true)
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UsersController), 'bootstrap.TbGri...', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.TbGri...', Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\user_list.php(11): CBaseController->widget('bootstrap.TbGri...', Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('user_list', Array, true)
+#8 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(50): CController->render('user_list', Array)
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionGetUserList()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/iptest/ipmanager/admin/index
+---
+2014/07/02 23:01:39 [error] [php] include(WidgetHelper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\iptest\ipmanager\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php(606) : eval()'d code(1): spl_autoload_call()
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CComponent.php(606): eval()
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\grid\CDataColumn.php(131): TbDataColumn->evaluateExpression()
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\grid\CGridColumn.php(144): TbDataColumn->renderDataCellContent()
+#4 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\grid\CGridView.php(589): TbDataColumn->renderDataCell()
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\grid\CGridView.php(545): TbGridView->renderTableRow()
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\grid\CGridView.php(455): TbGridView->renderTableBody()
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\CBaseListView.php(160): TbGridView->renderItems()
+#8 unknown(0): TbGridView->renderSection()
+#9 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#10 Z:\home\localhost\www\iptest\ipmanager\framework\zii\widgets\CBaseListView.php(128): TbGridView->renderContent()
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(173): TbGridView->run()
+#12 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\user_list.php(13): UsersController->widget()
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require()
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): UsersController->renderInternal()
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): UsersController->renderFile()
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): UsersController->renderPartial()
+#17 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(50): UsersController->render()
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(49): UsersController->actionGetUserList()
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): UsersController->runAction()
+#21 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): UsersController->filterAccessControl()
+#24 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#26 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): UsersController->runActionWithFilters()
+#27 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): UsersController->run()
+#28 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#30 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CWebApplication->run()
+REQUEST_URI=/iptest/ipmanager/users/getUserList
+in Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\user_list.php (13)
+in Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php (50)
+in Z:\home\localhost\www\iptest\ipmanager\index.php (13)
+2014/07/02 23:08:13 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\input\TbInput.php:145
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(147): TbInput->init()
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(1102): CBaseController->widget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\iptest\ipmanager\protected\extensions\bootstrap\widgets\TbActiveForm.php(284): TbActiveForm->inputRow('text', NULL, 'userFName', NULL, Array)
+#4 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\views\users\_form.php(8): TbActiveForm->textFieldRow(NULL, 'userFName', Array)
+#5 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\iptest\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(782): CController->renderPartial('_form', Array, true)
+#9 Z:\home\localhost\www\iptest\ipmanager\protected\modules\admin\controllers\UsersController.php(69): CController->render('_form', Array)
+#10 [internal function]: UsersController->actionUserForm('2')
+#11 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 Z:\home\localhost\www\iptest\ipmanager\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UsersController), Object(ReflectionMethod), Array)
+#13 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 Z:\home\localhost\www\iptest\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#20 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#22 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/use...')
+#23 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/iptest/ipmanager/users/userform?userId=2
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/getUserList
+---
+2014/07/02 23:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/iptest/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/users/getuserslist
+---
+2014/07/02 23:10:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "amin/users/getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('amin/users/getu...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/amin/users/getuserslist
+---
+2014/07/02 23:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "amin/users/getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('amin/users/getu...')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/iptest/ipmanager/amin/users/getuserslist
+---
+2014/07/02 23:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\iptest\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\iptest\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\iptest\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\iptest\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/iptest/ipmanager/admin/users/getuserslist
+---
+2014/07/02 23:13:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('users/getusersl...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getuserslist
+HTTP_REFERER=http://localhost/ipmanager/users/userform?userId=2
+---
+2014/07/02 23:14:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "userform".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('userform')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('users/userform')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/userform?userId=2
+HTTP_REFERER=http://localhost/ipmanager/users/getUserList
+---
+2014/07/02 23:14:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "userform".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('userform')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('userform')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('users/userform')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/userform?userId=2
+HTTP_REFERER=http://localhost/ipmanager/users/getUserList
+---
+2014/07/02 23:14:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getUserList".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getUserList')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('users/getUserLi...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/02 23:14:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getUserList".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getUserList')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('users/getUserLi...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/users/getUserList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/02 23:14:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "getuserslist".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('getuserslist')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getuserslist')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/admin/users/getuserslist
+HTTP_REFERER=http://localhost/ipmanager/admin/users/userform/userId/2
+---
+2014/07/03 22:39:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ipmanager/admin/users/getUserList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 22:41:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getUserList')
+#8 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/get...')
+#9 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ipmanager/admin/users/getUserList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/bootstrap.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/bootstrap.js
+HTTP_REFERER=http://localhost/ipmanager/site/index
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/jquery-latest.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/jquery-latest.min.js
+HTTP_REFERER=http://localhost/ipmanager/site/index
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/css/mystyle.css".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/css/mystyle.css
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/scripts.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/scripts.js
+HTTP_REFERER=http://localhost/ipmanager/site/index
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/css/bootstrap.css".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/css/bootstrap.css
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 22:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/myscript.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/myscript.js
+HTTP_REFERER=http://localhost/ipmanager/site/index
+---
+2014/07/03 22:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/site/index
+---
+2014/07/03 22:52:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/img/logo.png".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/img/logo.png
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 22:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/img/favicon.ico".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/img/favicon.ico
+---
+2014/07/03 22:55:03 [error] [php] include(Pages.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\ipmanager\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\protected\controllers\SiteController.php(45): spl_autoload_call()
+#1 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#2 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): SiteController->runAction()
+#4 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): SiteController->run()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\ipmanager\index.php(13): CWebApplication->run()
+REQUEST_URI=/ipmanager/site/index
+in Z:\home\localhost\www\ipmanager\protected\controllers\SiteController.php (45)
+in Z:\home\localhost\www\ipmanager\index.php (13)
+2014/07/03 23:09:52 [error] [exception.CException] exception 'CException' with message 'Контроллер SiteController не может найти представление "index".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:878
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 Z:\home\localhost\www\ipmanager\protected\controllers\SiteController.php(45): CController->render('index')
+#2 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('index')
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#8 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/ipmanager/site/index
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:10:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "index".' in Z:\home\localhost\www\ipmanager\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CController.php(270): CController->missingAction('index')
+#1 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('index')
+#2 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#3 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ipmanager/site/index
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/
+---
+2014/07/03 23:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 23:10:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:10:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/website/getWebsiteList
+---
+2014/07/03 23:24:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:30:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\ipmanager\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\ipmanager\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\ipmanager\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('deleteuser')
+#8 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/users/del...')
+#9 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ipmanager/admin/users/deleteuser/userId/2
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:32:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:32:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getUserList
+---
+2014/07/03 23:37:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/userform/userId/4
+---
+2014/07/03 23:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getuserlist
+---
+2014/07/03 23:37:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/userform
+---
+2014/07/03 23:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/userform
+---
+2014/07/03 23:38:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/users/getuserlist
+---
+2014/07/03 23:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/website/getWebsiteList
+---
+2014/07/03 23:50:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/
+---
+2014/07/03 23:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 23:51:20 [error] [php] include(WebsiteModel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\ipmanager\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\db\ar\CActiveRecord.php(386): spl_autoload_call()
+#1 Z:\home\localhost\www\ipmanager\framework\web\CActiveDataProvider.php(74): model()
+#2 Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php(11): CActiveDataProvider->__construct()
+#3 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): WebsiteController->actionGetWebsiteList()
+#4 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): WebsiteController->runAction()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): WebsiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): WebsiteController->run()
+#8 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ipmanager\index.php(13): CWebApplication->run()
+REQUEST_URI=/ipmanager/admin/website/getWebsiteList
+in Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php (11)
+in Z:\home\localhost\www\ipmanager\index.php (13)
+2014/07/03 23:51:50 [error] [php] include(WebsiteModel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\ipmanager\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\db\ar\CActiveRecord.php(386): spl_autoload_call()
+#1 Z:\home\localhost\www\ipmanager\framework\web\CActiveDataProvider.php(74): model()
+#2 Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php(11): CActiveDataProvider->__construct()
+#3 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): WebsiteController->actionGetWebsiteList()
+#4 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): WebsiteController->runAction()
+#6 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): WebsiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): WebsiteController->run()
+#8 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\ipmanager\index.php(13): CWebApplication->run()
+REQUEST_URI=/ipmanager/admin/website/getWebsiteList
+in Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php (11)
+in Z:\home\localhost\www\ipmanager\index.php (13)
+2014/07/03 23:52:51 [error] [exception.CException] exception 'CException' with message 'Свойство "dataProvider" не может быть пустым.' in Z:\home\localhost\www\ipmanager\framework\zii\widgets\CBaseListView.php:105
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#1 Z:\home\localhost\www\ipmanager\protected\extensions\bootstrap\widgets\TbGridView.php(68): CGridView->init()
+#2 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(147): TbGridView->init()
+#3 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\ipmanager\protected\modules\admin\views\website\website_list.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#5 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\ipmanager\framework\web\CController.php(782): CController->renderPartial('website_list', Array, true)
+#9 Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php(12): CController->render('website_list', Array)
+#10 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): WebsiteController->actionGetWebsiteList()
+#11 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getWebsiteList')
+#15 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/website/g...')
+#16 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ipmanager/admin/website/getWebsiteList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 23:53:12 [error] [exception.CException] exception 'CException' with message 'Свойство "dataProvider" не может быть пустым.' in Z:\home\localhost\www\ipmanager\framework\zii\widgets\CBaseListView.php:105
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#1 Z:\home\localhost\www\ipmanager\protected\extensions\bootstrap\widgets\TbGridView.php(68): CGridView->init()
+#2 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(147): TbGridView->init()
+#3 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\ipmanager\protected\modules\admin\views\website\website_list.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#5 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\ipmanager\framework\web\CController.php(782): CController->renderPartial('website_list', Array, true)
+#9 Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php(12): CController->render('website_list', Array)
+#10 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): WebsiteController->actionGetWebsiteList()
+#11 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getWebsiteList')
+#15 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/website/g...')
+#16 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ipmanager/admin/website/getWebsiteList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 23:54:09 [error] [exception.CException] exception 'CException' with message 'Свойство "dataProvider" не может быть пустым.' in Z:\home\localhost\www\ipmanager\framework\zii\widgets\CBaseListView.php:105
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\zii\widgets\grid\CGridView.php(314): CBaseListView->init()
+#1 Z:\home\localhost\www\ipmanager\protected\extensions\bootstrap\widgets\TbGridView.php(68): CGridView->init()
+#2 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(147): TbGridView->init()
+#3 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\ipmanager\protected\modules\admin\views\website\website_list.php(15): CBaseController->widget('bootstrap.widge...', Array)
+#5 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\ipmanager\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\ipmanager\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\ipmanager\framework\web\CController.php(782): CController->renderPartial('website_list', Array, true)
+#9 Z:\home\localhost\www\ipmanager\protected\modules\admin\controllers\WebsiteController.php(12): CController->render('website_list', Array)
+#10 Z:\home\localhost\www\ipmanager\framework\web\actions\CInlineAction.php(49): WebsiteController->actionGetWebsiteList()
+#11 Z:\home\localhost\www\ipmanager\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\ipmanager\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\ipmanager\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(282): CController->run('getWebsiteList')
+#15 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/website/g...')
+#16 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ipmanager/admin/website/getWebsiteList
+HTTP_REFERER=http://localhost/ipmanager/admin/index
+---
+2014/07/03 23:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/website/getWebsiteList
+---
+2014/07/03 23:55:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "themes/frontend/js/less-1.3.0.min.js".' in Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\ipmanager\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/frontend...')
+#1 Z:\home\localhost\www\ipmanager\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\ipmanager\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ipmanager/themes/frontend/js/less-1.3.0.min.js
+HTTP_REFERER=http://localhost/ipmanager/admin/website/getWebsiteList
+---
