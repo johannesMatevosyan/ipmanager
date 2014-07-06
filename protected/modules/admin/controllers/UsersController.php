@@ -165,11 +165,6 @@ class UsersController extends Controller
                 ->from('tbl_users')
                 ->where('userEmail=:email', array(':email'=>$_POST['LoginForm']['username']))
                 ->queryRow();
-        //var_dump($userActive); die;
-            if((int)$userActive['userBanned'] == 1)
-            {
-                throw new CHttpException(403,'Ваш профиль заблокирован!');
-            }
             if($userActive['userEmail'] !=FALSE && $userActive['userActive'] == 1)
             {
                 //var_dump($model->IdUsers); die;
@@ -184,6 +179,7 @@ class UsersController extends Controller
                     $sql = "UPDATE `tbl_users` SET `userLastVisit`='".$date."' WHERE `IdUsers`='".Yii::app()->user->id."'";
                     $connection->createCommand($sql)->execute();
                     
+                        // Yii::app()->user->setState('firstVisit', 'true');
                     if(empty($userActive['userLastVisit']))
                         Yii::app()->user->setState('firstVisit', 'true');
 

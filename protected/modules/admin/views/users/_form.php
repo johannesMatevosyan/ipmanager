@@ -1,9 +1,8 @@
-<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
-	'id'=>'users-form',
-	//'enableAjaxValidation'=>false,
-)); ?>
-
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p
+<?php 
+	$form = $this->beginWidget('bootstrap.widgets.TbActiveForm',array(
+		'id'=>'users-form',
+	)); 
+?>
 
 	<?php echo $form->textFieldRow($user,'userFName',array('class'=>'span5','maxlength'=>255)); ?>
 

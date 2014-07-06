@@ -12,10 +12,11 @@ class UserIdentity extends CUserIdentity {
             $this->_id = $user->IdUsers;
             $this->username = $user->userEmail;
             
-            $this->setState( 'FName', $user->userFName);
-            $this->setState( 'LName', $user->userLName);
-            $this->setState( 'Phone', $user->userPhone);
-            $this->setState( 'RegDate', $user->userRegDate);            
+            Yii::app()->user->setState('FName', $user->userFName);
+            Yii::app()->user->setState('LName', $user->userLName);
+            Yii::app()->user->setState('Phone', $user->userPhone);
+            Yii::app()->user->setState('RegDate', $user->userRegDate);            
+            Yii::app()->user->setState('role', $user->userRole);            
  
             $this->errorCode = self::ERROR_NONE;
         }

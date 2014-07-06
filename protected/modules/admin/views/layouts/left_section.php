@@ -4,9 +4,10 @@
         'encodeLabel'=>false,
         'activeCssClass'=>'active',
         'items'=>array(
-            array('label'=>'<i ></i><span>Subnets</span>', 'url'=>array('/admin/subnet/getSubnetList')),
-            array('label'=>'<i ></i><span>Websites</span>', 'url'=>array('/admin/website/getWebsiteList')),
-            array('label'=>'<i ></i><span>Users</span>', 'url'=>array('/admin/users/getUserList')),
+            array('label'=>'<i></i><span>Subnet Calculator</span>', 'url'=>array('/admin/subnet/subnetCalculator')),
+            array('label'=>'<i></i><span>Subnets</span>', 'url'=>array('/admin/subnet/getSubnetList')),
+            array('label'=>'<i></i><span>Websites</span>', 'url'=>array('/admin/website/getWebsiteList')),
+            array('label'=>'<i></i><span>Users</span>', 'url'=>array('/admin/users/getUserList')),
          ),
      )); ?>
 </nav>

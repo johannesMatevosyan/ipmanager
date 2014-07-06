@@ -13,3 +13,8 @@
 .user-list table th,.user-list table td  {
 	color:black
 }
+
+#sidebar {
+	width:170px !important;
+	text-align:center;
+}
