@@ -44,10 +44,11 @@ class SiteController extends Controller
 	{
 		if($error=Yii::app()->errorHandler->error)
 		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
+			var_dump($error); die();
+			// if(Yii::app()->request->isAjaxRequest)
+			// 	echo $error['message'];
+			// else
+			// 	$this->render('error', $error);
 		}
 	}
 }

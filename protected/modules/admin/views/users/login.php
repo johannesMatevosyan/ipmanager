@@ -5,18 +5,25 @@
     .nav.pull-right{
         display: none;
     }
+    .login_content{
+        min-height: 700px;
+        height: auto !important;
+        height: 700px;
+        margin: 0 auto;
+    }
 </style>
+<div class="login_content">
 <div class="row-fluid">
-    <div id="massage">
+    <div id="massage" style = "text-align:center;">
         <?php
             if(@$ok == 1){Yii::app()->user->setFlash('success', @$massage);}
             elseif(@$ok == 2) {Yii::app()->user->setFlash('error', @$massage);}
         ?>
         <?php $this->widget('bootstrap.widgets.TbAlert', array(
-            'block'=>true, // display a larger alert block?
-            'fade'=>true, // use transitions?
-            'closeText'=>'&times;', // close link text - if set to false, no close link is displayed
-            'alerts'=>array( // configurations per alert type
+            'block'=>true,
+            'fade'=>true,
+            'closeText'=>'&times;',
+            'alerts'=>array(
                 'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
                 'error'=>array( 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
                 ),
@@ -26,14 +33,11 @@
         <div class="offset2 register-form login-form">
         <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 'id'=>'login-form',
-                //'type'=>'horizontal',
                 'enableClientValidation'=>true,
-//                'clientOptions'=>array(
-//                        'validateOnSubmit'=>true,
-//                ),
+                'action'=>Yii::app()->createUrl('/admin/users/login'),
         )); ?>
 
-            <div class="modal show" role="dialog">
+            <div class="modal show" role="dialog" style = "margin-top:60px;">
                 <div class="modal-header">
                     <h3>Log in</h3>
                     <p>Please log in using your credentials</p>
@@ -41,7 +45,7 @@
                 <div class="modal-body">
             <table>
                 <tr>
-                    <td>Email</td>
+                    <td>Username</td>
                     <td><?php echo $form->textField($model,'username'); ?></td>
                     <?php //echo $form->error($model,'username'); ?>
                 </tr>
@@ -68,3 +72,4 @@
         <?php $this->endWidget(); ?>
     </div>
 </div>
+</div><!--.login_content-->

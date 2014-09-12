@@ -5,6 +5,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('eexcelwriter', dirname(__FILE__).'/../extensions/eexcelwriter');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
@@ -19,6 +20,7 @@ return array(
 		'application.components.*',
         'application.modules.admin.components',
         'application.modules.admin.models.*',
+        'application.extensions.eexcelwriter.components.EExcelWriter'
 	),
 
 	'modules'=>array(
@@ -43,7 +45,7 @@ return array(
 		'user'=>array(
             'class' => 'WebUser',
 			'allowAutoLogin'=>true,
-            'loginUrl' => array('users/login'),
+            'loginUrl' => array('/admin/users/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		'bootstrap' => array(
@@ -99,13 +101,13 @@ return array(
 		),
 	),
 
-    'language' => 'ru',
-    'sourceLanguage' => 'ru',
+    'language' => 'en',
+    'sourceLanguage' => 'en',
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'admin@stavnivam.ru',
-		'infoEmail'=>'info@stavnivam.ru',
+		'adminEmail'=>'admin@ipmanager',
+		'infoEmail'=>'info@ipmanager',
 	),
 );

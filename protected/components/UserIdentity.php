@@ -4,14 +4,14 @@ class UserIdentity extends CUserIdentity {
     protected $_id;
 
     public function authenticate(){
-        // Производим стандартную аутентификацию, описанную в руководстве.
-        $user = Users::model()->find(' userEmail = ?', array($this->username));
+        Yii::app()->language = 'en';
+        $user = Users::model()->find(' userFName = ?', array($this->username));
         if(($user===null) || ($this->password!==$user->userPassword)) {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         } else {
             $this->_id = $user->IdUsers;
             $this->username = $user->userEmail;
-            
+
             Yii::app()->user->setState('FName', $user->userFName);
             Yii::app()->user->setState('LName', $user->userLName);
             Yii::app()->user->setState('Phone', $user->userPhone);

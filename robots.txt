@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /protected/modules/
-Disallow: /protected1/
-Disallow: /assets/
-Disallow: /framework/
-Disallow: /images/
-Disallow: /stavnivam.zip/
-
-Sitemap: http://www.stavnivam.ru/sitemap.xml

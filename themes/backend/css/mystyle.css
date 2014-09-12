@@ -18,3 +18,14 @@
 	width:170px !important;
 	text-align:center;
 }
+.download-file {
+	float: right;
+}
+
+#available-subnet li{
+	float:left !important;
+	margin-left:6px;
+	padding: 2px;
+	cursor:pointer;
+	background-color:#ccc;
+}

@@ -28,7 +28,7 @@ class UsersController extends Controller
                                 'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('userUpdate', 'getuserlist', 'userform', 'deleteuser'),
+				'actions'=>array('userUpdate', 'getuserlist', 'userform', 'deleteuser', 'changeuserrole'),
 				'users'=>array('@'),
                 'expression'=>'isset($user->role) && ($user->role==="admin")',
 			),
@@ -38,6 +38,18 @@ class UsersController extends Controller
 			),
 		);
 	}
+
+    public function actionChangeUserRole()
+    {
+        if (isset($_POST['userId'], $_POST['userRole'])) {
+            $userId   = $_POST['userId'];
+            $userRole = $_POST['userRole'];
+            Yii::app()->db->createCommand('UPDATE tbl_users SET userRole = :userRole WHERE IdUsers = :userId')
+                          ->bindValues(array(':userRole' => $userRole, ':userId' => $userId))
+                          ->execute();
+            echo 'User Role Changed To - ' . $userRole;                   
+        }
+    }
 
     public function actionDeleteUser($userId)
     {
@@ -50,7 +62,7 @@ class UsersController extends Controller
     {
         $userList = new CActiveDataProvider('Users', array(
             'criteria' => array(
-                'condition'=>'userRole="user"',
+                'condition'=>'IdUsers<>1',
                 )
         ));
         $this->render('user_list', array('userList' => $userList));
@@ -58,6 +70,7 @@ class UsersController extends Controller
 
     public function actionUserForm($userId = NULL)
     {
+        Yii::app()->language = 'en';
         $user = new Users();
         if ($userId) {
                 $user = Users::model()->findByPk($userId);
@@ -144,7 +157,7 @@ class UsersController extends Controller
     public function actionLogin()
 	{
         //$this->layout = 'login';
-		$model = new LoginForm;
+        $model = new LoginForm;
         $massage = '';
         $ok = 0;
         if(isset($_GET['massage'])) $massage = $_GET['massage'];
@@ -156,14 +169,15 @@ class UsersController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
+          //  print_r($_POST['LoginForm']);
+
             $userActive = Yii::app()->db->createCommand()
                 ->select('userEmail, userActive, userBanned, userLastVisit')
                 ->from('tbl_users')
-                ->where('userEmail=:email', array(':email'=>$_POST['LoginForm']['username']))
+                ->where('userFName=:userFname', array(':userFname'=>$_POST['LoginForm']['username']))
                 ->queryRow();
             if($userActive['userEmail'] !=FALSE && $userActive['userActive'] == 1)
             {
@@ -188,7 +202,7 @@ class UsersController extends Controller
                 else
                 {
                     $ok = 2;
-                    $massage = 'Неправильный адрес эл. почты или пароль';
+                    $massage = 'Incorrect e-mail or password';
                 }
             }
             elseif($userActive['userEmail'] !=FALSE && $userActive['userActive'] == 0)
@@ -200,7 +214,7 @@ class UsersController extends Controller
             else
             {
                 $ok = 2;
-                $massage = 'Неправильный адрес эл. почты или пароль';
+                $massage = 'Incorrect e-mail or password';
             }
 		}
 		// display the login form

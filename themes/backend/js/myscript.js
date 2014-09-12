@@ -1,70 +1,47 @@
 $(document).ready(function(e) {
+    $('.set-admin').click(function() {
+        var userId   = $(this).attr('data-user-id');
+        var userRole = $(this).is(':checked') ? 'admin' : 'user';
+        $.ajax({
+            'data':{'userId':userId, 'userRole':userRole},
+            'url' : $('#base_url').val() + '/admin/users/changeUserRole',
+            'type':'post',
+            success: function(data)
+            {
+                alert(data);
+            }
+        });
+	$(".ip-change-element").change(function() {
+	 	var ip   = $("#SubnetModel_ip").val();
+		var mask = $("#SubnetModel_subnet").val();
 
-	$('.info-button').click(function(){
-		var ident = $(this).attr('data-id');
-		$('#order-info').modal('show');
-		$.ajax({
-			url:$('#base_url').val() + '/admin/admin/getorderdata',
-			data:{'id':ident},
-			type:'POST',
-			dataType:'json',
-			success: function(data){
-				$('#order-info-table tbody').html('');
-				$('#order-info-table tbody').append('<tr><td>Полное наименование юр. лица</td><td>'+data.orderInfo.fullname+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>Местонахождение юр.лица</td><td>'+data.orderInfo.fullname+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>ОГРН</td><td>'+data.orderInfo.oggrn+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>ИНН</td><td>'+data.orderInfo.inn+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>ФИО</td><td>'+data.orderInfo.phone+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>Контактный телефон</td><td>'+data.orderInfo.info+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>Дополнительная информация</td><td>'+data.orderInfo.fullname+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td>Печать</td><td><img height = "100" width = "100"  src = "' + $('#base_url').val()+'/images/pechati/'+data.images.pechat+'""></td></tr>')
-				$('#order-info-table tbody').append('<tr><td>Оснастка</td><td><img height = "100" width = "100"  src = "' + $('#base_url').val()+'/images/osnastki/'+data.images.osnastka+'"></td></tr>')
-				
-				if( data.orderInfo.mainfile_path )
-					$('#order-info-table tbody').append('<tr><td><b>Прикрепленный Файл</b></td><td><b><a style = "color:black" href = "'+ $('#base_url').val()+'/images/orders/mainfiles/'+data.orderInfo.mainfile_path+'">Просмотреть</b></a></td></tr>')
-				if( data.orderInfo.file_path )
-					$('#order-info-table tbody').append('<tr><td><b>Дополнительный Файл</b></td><td><b><a style = "color:black" href = "'+ $('#base_url').val() +'/images/orders/additionalfiles/'+data.orderInfo.file_path+'">Просмотреть</a></b></td></tr>')
-				
-			
-
-				if(data.orderInfo.payment_method == 0) {
-					payment_text = 'Наличные';
-				} else {
-					payment_text = 'Безналичный Расчет';
+	 	if ( ip.length )
+			$.ajax({
+				'data':{'ip':ip,'mask':mask},
+	 			'url' : $('#base_url').val() + '/admin/subnet/isSubnetValid',
+				'type':'post',
+	 			success: function(data)
+	 			{
+	 				alert(data);
 				}
-					$('#order-info-table tbody').append('<tr><td>Способ Оплаты</td><td>'+payment_text+'</td></tr>')
-				
-
-			}
-		});
+	 		});
+	 });
+	
+});
+// /	getSuitableSubnetMask();
+	
+	$(document).on( 'click', '#available-subnet li', function() {
+		$('#SubnetModel_subnet').val($(this).attr('data-subnet-value'));
 	});
 
-	$('.info-button-recovery').click(function(){
-		ident = $(this).attr('data-id');
-		$('#order-info').modal('show');
-		base_url = $('#base_url').val();
-		$.ajax({
-			url:$('#base_url').val() + '/admin/admin/getrecoverydata',
-			data:{'id':ident},
-			type:'POST',
-			dataType:'json',
-			success: function(data){
-				$('#order-info-table tbody').html('');
-				$('#order-info-table tbody').append('<tr><td><b>ФИО Заказчика</b></td><td>'+data.info.fio+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td><b>Номер Телефона</b></td><td>'+data.info.phone+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td><b>Дублирование нев. элементов</b></td><td>'+data.info.info+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td><b>Пожелания</b></td><td>'+data.info.wishes+'</td></tr>')
-				$('#order-info-table tbody').append('<tr><td><b>Файл с оттисками</b></td><td><b><a style = "color:black" href = "'+base_url+'/images/recovery/ottisk/'+data.info.mainfile_path+'">Просмотреть</b></a></td></tr>')//<a href = "'+$('#base_url').val()+'/images/ottisk/'+data.info.mainfile_path+'>Скачать</a>
-				$('#order-info-table tbody').append('<tr><td><b>Файл копия свидетельства</b></td><td><b><a style = "color:black" href = "'+ base_url +'/images/recovery/certificate/'+data.info.certificate_path+'">Просмотреть</a></b></td></tr>')
-			}
-		});
+	$('#SubnetModel_ip').change(function() {
+		getSuitableSubnetMask();
+	});
+	
+	$('#SubnetModel_ip').keyup(function() {
+		getSuitableSubnetMask();
 	});
 
-	/*
-	$('#articles-form #Images_file img').click(function() {
-		$('#Articles_files').trigger('click');
-	});
-	*/
 	$('#clear_article_image').click(function(e) {
         $('#article_image_input').val('');
 		$('#Articles_ImageClear').val('1');
@@ -78,8 +55,6 @@ $(document).ready(function(e) {
 			input_count = 1;
 		}
 		var file_input = '<li><input type="file" name="Images[files][]"></li>';
-		//alert(file_input);
-		//alert(input_count);
 		$('#admin_gallery .uplodDiv .uploadUl').html("");
 		var i=0;
 		for(i=0; i<input_count; i++){
@@ -89,28 +64,26 @@ $(document).ready(function(e) {
 })
 
 
-
-/********************* file oploader *************************************************/
-oFReader = new FileReader(),
-oFReader.onload = function (oFREvent)
+function getSuitableSubnetMask()
 {
-	var a = oFREvent.target.result;
-	//alert(a);
-	var img = '<img name="" src = '+a+' />';
-	$('.articleImage #article_image').html(img);
-};
-
-function loadImageFile(object)
-{
-	var object_id = object.getAttribute('id');
-	//alert(object_id);
-	var oFile = document.getElementById(object_id).files[0];
-	
-	oFReader.readAsDataURL(oFile);
+	var ip    = $('#SubnetModel_ip').val();
+	$.ajax({
+		'data':{'ip':ip},
+		'url' : $('#base_url').val() + '/admin/subnet/getSuitableNetwork',
+		'type':'post',
+		'dataType':'json',
+		success: function(data)
+		{
+			setAvailableHosts(data);
+		}
+	});
 }
-//)
-/************************************************************************************/
-function loader(id)
-{
-	$(id).html('<div id="loader" style="clear: both; text-align: center;"><img style="margin: auto;" src="'+$('#base_url').val()+'/themes/backend/img/loader.gif" ></div>');
+
+function setAvailableHosts(subnetInfo)
+{				
+	$("#available-used").html("");
+	$('#available-used').append('<br><span style = "color:#0DD413">Available Subnet - ' + subnetInfo.available_subnet + '</span>');
+	for ( subnet in subnetInfo.exist_subnet ) {
+		$('#available-used').append('<br><span style = "color:#ED1909">Used Subnet - ' + subnetInfo.exist_subnet[subnet] + '</span>');
+	}
 }
